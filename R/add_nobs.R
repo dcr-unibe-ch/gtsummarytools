@@ -241,7 +241,7 @@ add_nobs <- function(table, location = "col", rm_missing = TRUE, nobs_text = "No
     
     # Move the Nobs under the stat columns----
     
-    if( "add_overall" %in% (table$cards  %>% names()) ) {
+    if( "add_overall" %in% (table$cards  %>% names()) | length(grp) == 0) {
       table <- 
         table  %>% 
         modify_table_body (
